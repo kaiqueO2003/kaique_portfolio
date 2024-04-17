@@ -1,0 +1,339 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;400;600;800&display=swap');
+
+:root{
+    --cor-primaria: #35155D;
+    --cor-secundaria:#4477CE;
+    --cor-terciaria: #8CABFF;
+    --cor-quartenaria: #3A31E8;
+
+    --fonte-primaria: 'Roboto Slab', serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-around;
+    position: fixed;
+    gap: 12.5rem;
+    height: 4.375rem;
+    width: 100vw;
+    background-color: var(--cor-primaria);
+
+    
+}
+.menuopc{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-around;
+    gap: 4rem;
+       
+}
+.menu a{
+    color: var(--cor-terciaria);
+    font-size: 1.1rem;    
+       font-weight: bold;
+}
+.menuopc a{
+    color: var(--cor-terciaria);
+    transition: all 200ms ease-in;
+    
+}
+.menuopc a:hover{
+    color: #000000;
+}
+
+.kaique{
+    display: flex;
+    align-items: center;
+    flex-direction: row;  
+}
+.nome1{
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+.nome{
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+.apresentacao{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    background-color: var(--cor-secundaria);
+}
+.info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.3rem;
+    gap: 15px;
+    color: var(--cor-qa);
+}
+
+.foto_kaique{
+    border: 2px solid black; /* Define a espessura e a cor da borda */
+    border-radius: 8px; /* Define o arredondamento das bordas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    /* Estilos opcionais para dimensionamento e espaçamento */
+    width: 25%;
+    padding: 10px;
+    margin: 20px;
+}
+.redes{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+.redes img{
+    width: 50px;
+    height: 50px;
+}
+.sobre_mim{
+    background-color: var(--cor-secundaria);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+}
+.desc{   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.2rem;
+margin-top: 4rem;
+}
+.descsub{
+    display: flex;
+    align-items: center;
+    flex-direction: c;
+}
+.sobre_mim {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+.imagem_sobre{
+    flex: 0 0 auto; 
+    margin-right: 15px; 
+}
+  
+.desc_sobre {
+    flex: 1; /* Vai ocupar todo o espaço restante */
+    font-family: var(--fonte-primaria);
+    gap: 200px;
+    
+  }
+  
+.desc_sobre h2 {
+   
+    text-align: center;
+    font-size: 3rem; 
+    margin-bottom: 10px; 
+}
+.desc_sobre p {
+    font-size: 1rem; 
+    line-height: 1.5; 
+    margin-bottom: 20px; 
+}
+.cards-section {
+    height: 100vh;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    background-color: var(--cor-terciaria);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.3s ease;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-description {
+    padding: 20px;
+}
+
+.card-description h3 {
+    margin-top: 0;
+}
+
+.card-description p {
+    color: #666;
+}
+
+.card-description a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.card-description a:hover {
+    background-color: #0056b3;
+}
+
+.tecnologia-section {
+    text-align: center;
+    background-color: var(--cor-secundaria);
+    
+}
+
+
+.card-tec{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-tecnologia {
+    width: 250px;
+    background-color: var(--cor-terciaria);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-tecnologia img {
+    width: 50%;
+    height: 130px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-description-tecnologia {
+    padding: 20px;
+   
+}
+
+.card-description-tecnologia h3 {
+    margin-top: 0;
+    font-size: 18px;
+   
+}
+
+.card-description-tecnologia p {
+    
+    font-size: 14px;
+}
+
+.desctec{
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}
+.contatos{
+    box-shadow: 0px 10px 8px 10px black;
+    background-color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+h2{
+    
+    font-size: 2.5rem;
+}
+.contatos h2{
+    color: var(--cor-secundaria);
+}
+.confooter{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 1rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+   
+    .apresentacao {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .foto_kaique {
+        width: 80%;
+    }
+
+    .nome {
+        text-align: center;
+    }
+
+    .sobre_mim {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .cards-section {
+        height: auto;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+
+    .foto_kaique {
+        width: 100%;
+    }
+
+    .desc_sobre {
+        font-size: 0.9rem;
+    }
+
+    .card-tecnologia {
+        width: 90%;
+    }
+}
