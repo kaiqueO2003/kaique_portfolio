@@ -1,6 +1,6 @@
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;400;600;800&display=swap');
 
 :root{
     --cor-primaria: #35155D;
@@ -24,19 +24,20 @@ html {
 }
 
 
-.menu{
-    display: flex;
-    flex-direction:row;
+.menu {
+     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
     position: fixed;
     gap: 12.5rem;
     height: 4.375rem;
     width: 100vw;
     background-color: var(--cor-primaria);
-
-    
+    top: 0; /* Garante que o menu esteja fixo no topo */
+    z-index: 1000; /* Garante que o menu fique sobre outros elementos */
 }
+
 .menuopc{
     display: flex;
     flex-direction:row;
@@ -90,6 +91,9 @@ html {
     font-size: 1.3rem;
     gap: 15px;
     color: var(--cor-qa);
+    background-color: var(--cor-secundaria); /* Garante a cor de fundo correta */
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e border na largura total do elemento */
 }
 
 .foto_kaique{
@@ -218,53 +222,50 @@ margin-top: 4rem;
 .tecnologia-section {
     text-align: center;
     background-color: var(--cor-secundaria);
-    
+    padding: 50px 0;
 }
 
-
-.card-tec{
-    margin-top: 10px;
+.card-tec {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 20px; /* Espaço entre os cards */
 }
+
 .card-tecnologia {
     width: 250px;
     background-color: var(--cor-terciaria);
     border-radius: 8px;
     overflow: hidden;
-    margin: 0 auto 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 10px; 
 }
 
 .card-tecnologia img {
-    width: 50%;
-    height: 130px;
-    object-fit: cover;
+    width: 100%;
+    height: 100px; 
+    object-fit: contain; 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
 .card-description-tecnologia {
     padding: 20px;
-   
 }
 
 .card-description-tecnologia h3 {
     margin-top: 0;
     font-size: 18px;
-   
 }
 
 .card-description-tecnologia p {
-    
     font-size: 14px;
 }
 
-.desctec{
-    display: flex;
-    align-items: center;
-    flex-direction:column;
+/* Efeito hover para os cards */
+.card-tecnologia:hover {
+    transform: translateY(-5px);
 }
 .contatos{
     box-shadow: 0px 10px 8px 10px black;
@@ -292,11 +293,18 @@ h2{
 
 
 @media only screen and (max-width: 768px) {
-   
+    .info {
+        background-color: var(--cor-secundaria); /* Garante a cor de fundo correta em dispositivos móveis */
+        padding: 20px; /* Adiciona espaçamento interno para dispositivos móveis */
+    }
     .apresentacao {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+        margin-top: 5rem; /* Espaço acima da seção para evitar sobreposição */
+        padding: 20px; /* Adiciona espaçamento interno */
+        background-color: var(--cor-secundaria); /* Garante a cor de fundo correta */
+        box-sizing: border-box; /* Inclui padding e border na largura total da seção */
     }
 
     .foto_kaique {
@@ -311,20 +319,59 @@ h2{
         flex-direction: column;
         gap: 20px;
         text-align: center;
+        padding: 20px; /* Adiciona espaçamento interno */
+        margin-top: 5rem; /* Espaço acima da seção para evitar sobreposição */
+        background-color: var(--cor-secundaria); /* Garante a cor de fundo correta */
+        box-sizing: border-box; /* Inclui padding e border na largura total da seção */
+    }
+
+    .imagem_sobre {
+        margin-bottom: 20px; /* Adiciona espaçamento abaixo da imagem */
     }
 
     .cards-section {
-        height: auto;
+        height: auto; /* Ajusta a altura para acomodar o conteúdo */
+        background-color: var(--cor-secundaria); /* Garante a cor de fundo correta */
     }
 
     .card {
         width: 80%;
     }
+
+    .card-tec {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-tecnologia {
+        width: 80%;
+    }
+
+    .menu {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 10px;
+        height: 5rem; /* Aumenta a altura do header */
+        justify-content: space-between; /* Garante que o conteúdo se distribua bem */
+        background-color: var(--cor-primaria); /* Garante a cor de fundo correta do menu */
+    }
+
+    .menuopc {
+        gap: 2rem; /* Ajusta o espaçamento horizontal entre os itens do menu */
+        width: auto; /* Permite que o menu ocupe apenas o espaço necessário */
+    }
+
+    .menu a {
+        font-size: 1rem;
+    }
+
+    .kaique {
+        display: none; /* Remove o nome e a imagem no menu para telas pequenas */
+    }
 }
 
 @media only screen and (max-width: 480px) {
-
-
+    
     .foto_kaique {
         width: 100%;
     }
@@ -336,4 +383,44 @@ h2{
     .card-tecnologia {
         width: 90%;
     }
+
+    .menu {
+        padding: 0 5px;
+        height: 4rem; /* Ajusta a altura do header para telas muito pequenas */
+        background-color: var(--cor-primaria); /* Garante a cor de fundo correta do menu */
+    }
+
+    .menuopc {
+        gap: 1rem; /* Ajusta o espaçamento horizontal para telas muito pequenas */
+    }
+
+    .menu a {
+        font-size: 0.9rem;
+    }
+
+    .kaique {
+        display: none; /* Remove o nome e a imagem no menu para telas muito pequenas */
+    }
+
+    .sobre_mim {
+        gap: 15px; 
+        padding: 10px; 
+        margin-top: 5rem; 
+        background-color: var(--cor-secundaria); /* Garante a cor de fundo correta */
+    }
+
+    .imagem_sobre {
+        margin-bottom: 15px; 
+    }
+
+    .redes {
+        flex-direction: column; 
+        gap: 5px; 
+    }
+
+    .redes img {
+        width: 40px; 
+        height: 40px;
+    }
 }
+
